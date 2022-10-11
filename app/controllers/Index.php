@@ -4,11 +4,11 @@
 namespace controllers;
 
 
-use core\controllerInterface;
+use core\AbstractController;
 
-class Index implements controllerInterface
+class Index extends AbstractController
 {
     public function index(){
-
+        $this->view->render('index_index');
     }
 }
