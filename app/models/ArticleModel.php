@@ -37,7 +37,7 @@ class ArticleModel
     }
 
     public function all(){
-        $sql = "SELECT * FROM articles";
+        $sql = "SELECT * FROM {$this->table}";
         $result = $this->db->query($sql);
         if(!$result){
             //TODO log with select error
