@@ -60,4 +60,9 @@ class Route
         }
         return $url;
     }
+
+    static public function redirect(string $url='/'){
+        header('Location:'.$url);
+        exit();
+    }
 }
