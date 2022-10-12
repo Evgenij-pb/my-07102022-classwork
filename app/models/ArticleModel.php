@@ -35,4 +35,16 @@ class ArticleModel
         $sql = "INSERT INTO {$this->table}(title, text) VALUES ('{$article['title']}','{$article['text']}');";
         return $this->db->query($sql);
     }
+
+    public function all(){
+        $sql = "SELECT * FROM articles";
+        $result = $this->db->query($sql);
+        if(!$result){
+            //TODO log with select error
+            return[];
+        }
+        //TODO debug
+        return $result->fetch_all(MYSQLI_ASSOC);
+
+    }
 }
