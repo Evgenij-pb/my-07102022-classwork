@@ -22,11 +22,14 @@ class Admin extends AbstractController
     public function index()
     {
         //TODO debug of model
-        $model = new ArticleModel();
+        /*$model = new ArticleModel();
         $res = $model->add(['title' =>'trest', 'text'=>'test text']);
 
-        var_dump($res);
-        //$this->view->render('admin_index');
+        var_dump($res);*/
+        $articles = $this->model->all();
+        $this->view->render('admin_index',[
+            'articles'=>$articles
+        ]);
     }
 
     public function create(){
