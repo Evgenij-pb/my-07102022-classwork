@@ -14,7 +14,12 @@
                 <tr>
                     <td><?= $article['id'] ?></td>
                     <td><?= $article['title'] ?></td>
-                    <td><!--SDSD--></td>
+                    <td>
+                        <form action="<?=\core\Route::url('admin','destroy')?>" method="post">
+                            <input type="hidden" name="id" value="<?=$article['id']?>">
+                            <button>&#128465;</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>

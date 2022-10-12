@@ -47,4 +47,10 @@ class Admin extends AbstractController
         $this->model->add($article);
         Route::redirect(Route::url('admin','index'));
     }
+
+    public function destroy(){
+        $id = filter_input(INPUT_POST, 'id');
+        $this->model->delete($id);
+        Route::redirect(Route::url('admin','index'));
+    }
 }

@@ -47,4 +47,8 @@ class ArticleModel
         return $result->fetch_all(MYSQLI_ASSOC);
 
     }
+    public function delete(int $id){
+        $sql = "DELETE FROM {$this->table} WHERE id = {$id}";
+        return $this->db->query($sql);
+    }
 }
