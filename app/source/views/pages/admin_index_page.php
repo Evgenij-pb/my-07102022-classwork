@@ -1,6 +1,10 @@
 <h2>All articles</h2>
-<a href="<?= \core\Route::url('admin', 'create') ?>">create article</a>
-<table>
+<a  href="<?= \core\Route::url('admin', 'create') ?>">
+    <button id="create-btn">
+        <img class="icons" src="/img/add_icon.png" alt="create">Create article
+    </button>
+</a>
+<table id="articles-table">
     <thead>
     <tr>
         <th>#</th>
@@ -15,10 +19,19 @@
                     <td><?= $article['id'] ?></td>
                     <td><?= $article['title'] ?></td>
                     <td>
-                        <form action="<?=\core\Route::url('admin','destroy')?>" method="post">
-                            <input type="hidden" name="id" value="<?=$article['id']?>">
-                            <button>&#128465;</button>
-                        </form>
+                        <div class="del-edit-btn-box">
+                            <form action="<?=\core\Route::url('admin','destroy')?>" method="post">
+                                <input type="hidden" name="id" value="<?=$article['id']?>">
+                                <button><img class="icons" src="/img/delete_icon.png" alt="delete"></button>
+                            </form>
+                            <form action="<?=\core\Route::url('admin','edit')?>" method="post">
+                                <input type="hidden" name="id" value="<?=$article['id']?>">
+                                <button><img class="icons" src="/img/edit_icon.png" alt="edit"></button>
+                            </form>
+                        </div>
+
+
+
                     </td>
                 </tr>
             <?php endforeach; ?>

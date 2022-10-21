@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 120px;
+    background: #E4EFC0;
+    background: linear-gradient(to right, #E4EFC0 0%, #ABBD73 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
+}
+body{
+    background: #F5F5F7;
+    background: linear-gradient(to right, #EBEBED 0%, #E6EDED 25%, #E2E1ED 75%, #EBEBED 100%);
+}
+main{
+    margin: 0 auto;
+    width: 800px;
+    /*
+    background-color: #fffcf6;
+    */
+    min-height: 800px;
+    padding: 20px;
+    border-left: 1px solid #6d6d6d;
+    border-right: 1px solid #6d6d6d;
+}
+
+.del-edit-btn-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.del-edit-btn-box button{
+    margin: 0 2px 0 2px;
+}
+
+.icons{
+    height: 16px;
+    margin: 2px;
+}
+#articles-table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 2px solid #b3adad;
+    padding:5px;
+    margin:10px auto ;
+}
+
+#articles-table th{
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #f0f0f0;
+    color: #313030;
+}
+
+#articles-table td{
+    border:1px solid #b3adad;
+    text-align:center;
+    padding:5px;
+    background: #ffffff;
+    color: #313030;
+}
+
+.create-edit-form{
+    display: flex;
+    flex-direction: column;
+
+}
+.create-edit-form label{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.create-edit-form .submit{
+margin: 15px auto;
+    width: 100px;
+    padding: 5px;
+}
+
+.create-edit-form textarea{
+    resize: vertical;
+    padding: 10px;
+
+}
+
+.create-edit-form #title{
+    padding: 5px 10px 5px 10px;
+}
+
+#create-btn{
+    margin: 15px 0 15px 0;
+}
